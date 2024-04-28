@@ -48,6 +48,7 @@ import pizzaSliceIcon from '../../../public/Images/pizzaSliceIcon.png'
 import mainCourseIcon from '../../../public/Images/mainCourseIcon.png'
 import chineseIcon from '../../../public/Images/chineseIcon.png'
 import biryaniIcon from '../../../public/Images/biryaniIcon.png'
+import drinksIcon from '../../../public/Images/drinksIcon.png'
 
 export const MenuItems = [
     dessertIcon,
@@ -102,16 +103,20 @@ export const menu_list = [
         menu_image: tandoorIcon,
     },
     {
-        menu_name: "Indian Main Course",
-        menu_image: mainCourseIcon,
-    },
-    {
         menu_name: "Biryani",
         menu_image: biryaniIcon,
     },
     {
         menu_name: "Dessert",
         menu_image: dessertIcon,
+    },
+    {
+        menu_name: "Indian Main Course",
+        menu_image: mainCourseIcon,
+    },
+    {
+        menu_name: "Drinks",
+        menu_image: drinksIcon,
     },
 ]
 
