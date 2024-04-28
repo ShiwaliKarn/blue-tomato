@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Outfit:wght@100..900&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,10 +7,10 @@
   font-family: "Outfit", sans-serif;
 }
 
-:root{
-  --darkBlue:#49557e;
-  --blue:#0247a3;
-  --red:#fe0003;
+:root {
+  --darkBlue: #49557e;
+  --blue: #0247a3;
+  --red: #fe0003;
 }
 
 body {
@@ -21,16 +21,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.home{
+
+.home {
   width: 80%;
   margin: auto;
 }
-
-@keyframes fadeIn{
-  0%{
-    opacity:0;
-  }
-100%{
-  opacity: 1;
-}
-  }

@@ -2,22 +2,24 @@
 import { GoPlus } from "react-icons/go";
 import Image from 'next/image'
 import styles from '@/app/Styles/foodItem.module.css'
-import { useState } from 'react'
+import { useContext} from 'react'
 import { FiMinus } from "react-icons/fi";
 import { LiaCartPlusSolid } from "react-icons/lia";
+import { StoreContext } from "@/app/context/StoreContext";
 
 const FoodItem = ({ id, name, price, descrption, image }) => {
-  const [itemCount, setItemCount] = useState(0)
+
+  const {cartItems,addToCart,removeFromCart} = useContext(StoreContext);
   return (
     <div className={styles.food_item}>
       <div className={styles.food_item_image_container}>
         <Image className={styles.food_item_image} src={image} alt="" />
         {
-          !itemCount ? < LiaCartPlusSolid  className={styles.add} onClick={() => setItemCount(prev => prev + 1)} alt='' />
+          !cartItems[id] ? < LiaCartPlusSolid  className={styles.add} onClick={() => addToCart(id) }alt='' />
             : <div className={styles.food_item_counter} >
-               <FiMinus className={styles.minusCounter} onClick={() => setItemCount(prev => prev - 1)} />
-              <p >{itemCount}</p>
-              < GoPlus className={styles.plusCounter} onClick={() => setItemCount(prev => prev + 1)} />
+               <FiMinus className={styles.minusCounter} onClick={() => removeFromCart(id)} />
+              <p >{cartItems[id]}</p>
+              < GoPlus className={styles.plusCounter} onClick={() => addToCart(id)} />
             </div>
         }
       </div>
