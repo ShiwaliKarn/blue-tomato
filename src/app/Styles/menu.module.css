@@ -39,13 +39,16 @@ transition: 0.2s;
     color: #49557e;
     font-size: max(1.4vw,16px);
     cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .explore_menu hr{
     margin: 10px 0px;
-    height: 2px;
-    background-color:#bbb;
+    height: 1px;
+    background-color: #d5d5e9;
     border: none;
+
 }
 .explore_menu_list_item .active{
     box-shadow: 1px 1px 6px red;

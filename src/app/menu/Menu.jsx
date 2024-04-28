@@ -32,3 +32,6 @@ const Menu = ({ category, SetCategory }) => {
 
 
 export default Menu;
+
+
+
