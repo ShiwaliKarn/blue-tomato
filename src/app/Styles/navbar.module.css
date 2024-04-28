@@ -1,0 +1,65 @@
+.navbar{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 102px;
+    height: 92px;
+}
+.navbar_menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+.navbar_right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar button{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid #0247a3;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.navbar button:hover{
+    background-color: #dde8f4c1;
+}
+
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.navbar li{
+    cursor: pointer;
+
+}
+
+.CiSearch , .TiShoppingCart{
+    font-size: 37px;
+    color: #49557e;
+}
+.navbar_search_icon{
+    position: relative;
+
+}
+.navbar_search_icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: #fe0003;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
