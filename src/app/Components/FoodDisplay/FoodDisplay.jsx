@@ -1,3 +1,4 @@
+'use client';
 import React, { useContext } from 'react'
 import styles from '@/app/Styles/foodDisplay.module.css'
 import { StoreContext } from '@/app/context/StoreContext'
