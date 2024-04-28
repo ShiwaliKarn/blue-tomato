@@ -102,7 +102,7 @@
     left: 15px;
     bottom: 15px;
     color: white;
-    font-size: 37px;
+    font-size: 26px;
     transition: .3s;
 }
 
@@ -110,3 +110,4 @@
     color: red;
     transform: scale(1.1);
 }
+

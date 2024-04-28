@@ -2,7 +2,7 @@
 import { GoPlus } from "react-icons/go";
 import Image from 'next/image'
 import styles from '@/app/Styles/foodItem.module.css'
-import { useContext, useState } from 'react'
+import { useContext} from 'react'
 import { FiMinus } from "react-icons/fi";
 import { LiaCartPlusSolid } from "react-icons/lia";
 import { StoreContext } from "@/app/context/StoreContext";

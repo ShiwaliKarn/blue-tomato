@@ -26,3 +26,14 @@ a {
   width: 80%;
   margin: auto;
 }
+
+.copyright{
+  margin-top: 60px;
+  background-color: var(--darkBlue);
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+}

@@ -4,6 +4,7 @@ import Menu from '../menu/Menu'
 import Navbar from './Navbar'
 import FoodDisplay from './FoodDisplay/FoodDisplay';
 
+
 const HomePage = () => {
 const[category,SetCategory] = useState("All");
 
