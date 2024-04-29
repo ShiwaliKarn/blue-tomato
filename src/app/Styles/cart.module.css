@@ -1,7 +1,7 @@
 .cart {
     width: 80%;
     margin: auto;
-    height: 100vh;
+    /* height: 100vh; */
     margin-top: 100px;
 }
 
@@ -92,4 +92,13 @@
     border: none;
     color: white;
     border-radius: 4px;
+}
+
+@media(max-width:750px){
+    .cart_bottom{
+        flex-direction: column-reverse;
+    }
+    .cart_promocode{
+        justify-content: start;
+    }
 }

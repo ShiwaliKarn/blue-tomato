@@ -80,6 +80,9 @@
     .navbar_menu {
         display: none;
     }
+    /* .navbar{
+        padding: 13px 19px!important;
+    } */
 
     .logo {
         width: 65px;

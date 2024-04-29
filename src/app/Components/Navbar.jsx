@@ -11,7 +11,7 @@ import Link from 'next/link';
 const Navbar = ({ setShowLogin }) => {
     const [menu, setMenu] = useState("Home");
     const [scrollPosition, setScrollPosition] = useState(0);
-    const { cartItems } = useContext(StoreContext);
+    const {getTotalCartAmount} = useContext(StoreContext);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -54,7 +54,7 @@ const Navbar = ({ setShowLogin }) => {
                 <div className={styles.navbar_search_icon}>
                 <Link href='/cart'>
                 <TiShoppingCart className={styles.TiShoppingCart} />
-                        {Object.keys(cartItems).length > 0 && <div className={styles.dot}></div>}
+                    <div className={getTotalCartAmount()===0?"":styles.dot}></div>
                     </Link>
                 </div>
                 <button onClick={() => setShowLogin(true)}>Sign in</button>
