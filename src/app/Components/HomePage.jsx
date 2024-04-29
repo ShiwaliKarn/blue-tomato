@@ -3,13 +3,13 @@ import { useState } from 'react';
 import Menu from '../menu/Menu'
 import Navbar from './Navbar'
 import FoodDisplay from './FoodDisplay/FoodDisplay';
-import LoginPopup from './LoginPopup/LoginPopup';
+// import LoginPopup from './LoginPopup/LoginPopup';
 import dynamic from 'next/dynamic';
 
 const HomePage = () => {
   const [category, SetCategory] = useState("All");
   const[showLogin,setShowLogin] = useState(false);
-  const DynamicLoginPopup = dynamic(() => import('./LoginPopup'), { ssr: false });
+  const DynamicLoginPopup = dynamic(() => import('./LoginPopup/LoginPopup.jsx'), { ssr: false });
   return (
     <>
     {showLogin?<DynamicLoginPopup setShowLogin={setShowLogin} /> : <> </>}
