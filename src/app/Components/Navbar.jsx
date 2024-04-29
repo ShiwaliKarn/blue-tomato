@@ -36,7 +36,16 @@ const Navbar = ({setShowLogin}) => {
             left: scrollPosition > 400? '0' : ' ',
             top: scrollPosition > 400? '0' : ' ',
         }}>
-            <Image className={styles.logo} src='/favicon.png' width={80} height={100} alt='blue tomato logo' priority></Image>
+             {typeof window !== 'undefined' && (
+                <Image
+                    className={styles.logo}
+                    src='/favicon.png'
+                    width={80}
+                    height={100}
+                    alt='blue tomato logo'
+                    priority
+                />
+            )}
             <ul className={styles.navbar_menu}>
                 <li onClick={() =>setMenu("Home")} className={menu==="Home"?styles.active:""}>Home</li>
                 <li onClick={() =>setMenu("Menu")} className={menu==="Menu"?styles.active:""}>Menu</li>
