@@ -9,19 +9,21 @@ import { useState,useEffect } from 'react';
 const Navbar = ({setShowLogin}) => {
     const[menu, setMenu] = useState("Home");
     const [scrollPosition, setScrollPosition] = useState(0);
-
     useEffect(() => {
-        const handleScroll = () => {
-            const position = window.scrollY;
-            setScrollPosition(position);
-        };
+        if (typeof window !== 'undefined') {
+            const handleScroll = () => {
+                const position = window.scrollY;
+                setScrollPosition(position);
+            };
 
-        window.addEventListener('scroll', handleScroll);
+            window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
     }, []);
+
 
 
     return (
