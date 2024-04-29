@@ -144,7 +144,7 @@ export const food_list = [
     },
     {
         _id: "3",
-        name: "Classic Paneer Burger",
+        name: "Classic Chicken Burger",
         image: ClassicChickenBurger,
         price: 129,
         descrption: "Chicken wheat burger with cheese slice",
