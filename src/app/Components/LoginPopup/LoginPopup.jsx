@@ -1,4 +1,5 @@
 'use client';
+
 import styles from '@/app/Styles/loginPopup.module.css'
 import { useState } from 'react'
 import { RxCross2 } from "react-icons/rx";
