@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     padding: 13px 0px;
     display: flex;
     justify-content: space-between;
@@ -8,26 +8,28 @@
 }
 
 
-.logo{
+.logo {
     width: 102px;
     height: 92px;
     cursor: pointer;
 }
-.navbar_menu{
+
+.navbar_menu {
     display: flex;
     list-style: none;
     gap: 20px;
     color: #49557e;
     font-size: 18px;
 }
-.navbar_right{
+
+.navbar_right {
     display: flex;
     align-items: center;
     gap: 40px;
     cursor: pointer;
 }
 
-.navbar button{
+.navbar button {
     background: transparent;
     font-size: 16px;
     color: #49557e;
@@ -36,32 +38,35 @@
     border-radius: 50px;
     transition: 0.3s;
     white-space: nowrap;
-cursor: pointer;
+    cursor: pointer;
 }
 
-.navbar button:hover{
+.navbar button:hover {
     background-color: #dde8f4c1;
 }
 
-.navbar .active{
+.navbar .active {
     padding-bottom: 2px;
     border-bottom: 2px solid #49557e;
 }
 
-.navbar li{
+.navbar li {
     cursor: pointer;
 
 }
 
-.CiSearch , .TiShoppingCart{
+.CiSearch,
+.TiShoppingCart {
     font-size: 37px;
     color: #49557e;
 }
-.navbar_search_icon{
+
+.navbar_search_icon {
     position: relative;
 
 }
-.navbar_search_icon .dot{
+
+.navbar_search_icon .dot {
     position: absolute;
     min-width: 10px;
     min-height: 10px;
@@ -69,4 +74,20 @@ cursor: pointer;
     border-radius: 5px;
     top: -8px;
     right: -8px;
+}
+
+@media(max-width:752px) {
+    .navbar_menu {
+        display: none;
+    }
+
+    .logo {
+        width: 65px;
+        height: 66px;
+    }
+
+    .navbar_right {
+        gap: 20px;
+        margin-left: 40px;
+    }
 }

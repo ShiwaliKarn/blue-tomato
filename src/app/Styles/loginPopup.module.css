@@ -70,8 +70,19 @@
     font-size: 15px;
     cursor: pointer;
 }
+.login_popup_condition{
+display: flex;
+align-items: flex-start;
+gap: 7px;
+margin-top: -15px;
+/* flex-wrap: nowrap; */
+}
 
-/* display: flex;
-align-items: start;
-gap: 6px;
-flex-wrap: nowrap; */
+.login_popup_condition input{
+    margin-top: 4px;
+}
+.login_popup p span{
+    color: var(--red);
+    font-weight: 500;
+    cursor: pointer;
+}

@@ -4,11 +4,15 @@ import styles from '../Styles/navbar.module.css'
 import Image from 'next/image'
 import { TiShoppingCart } from "react-icons/ti";
 import { CiSearch } from "react-icons/ci";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { StoreContext } from '../context/StoreContext'
+import Link from 'next/link';
 
 const Navbar = ({ setShowLogin }) => {
     const [menu, setMenu] = useState("Home");
     const [scrollPosition, setScrollPosition] = useState(0);
+    const { cartItems } = useContext(StoreContext);
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const handleScroll = () => {
@@ -36,7 +40,10 @@ const Navbar = ({ setShowLogin }) => {
             left: scrollPosition > 400 ? '0' : ' ',
             top: scrollPosition > 400 ? '0' : ' ',
         }}>
-            <Image className={styles.logo} src='/favicon.png' width={80} height={100} alt='blue tomato logo' priority></Image>
+            <Link href='/'>
+            <Image className={styles.logo} src='/favicon.png' width={80} height={100} alt='blue tomato logo' priority />
+            </Link>
+
             <ul className={styles.navbar_menu}>
                 <li onClick={() => setMenu("Home")} className={menu === "Home" ? styles.active : ""}>Home</li>
                 <li onClick={() => setMenu("Menu")} className={menu === "Menu" ? styles.active : ""}>Menu</li>
@@ -45,8 +52,10 @@ const Navbar = ({ setShowLogin }) => {
             <div className={styles.navbar_right}>
                 <CiSearch className={styles.CiSearch} />
                 <div className={styles.navbar_search_icon}>
-                    <TiShoppingCart className={styles.TiShoppingCart} />
-                    <div className={styles.dot}></div>
+                <Link href='/cart'>
+                <TiShoppingCart className={styles.TiShoppingCart} />
+                        {Object.keys(cartItems).length > 0 && <div className={styles.dot}></div>}
+                    </Link>
                 </div>
                 <button onClick={() => setShowLogin(true)}>Sign in</button>
             </div>

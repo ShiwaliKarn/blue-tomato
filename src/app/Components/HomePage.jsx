@@ -9,13 +9,13 @@ const HomePage = () => {
   const [category, SetCategory] = useState("All");
   const[showLogin,setShowLogin] = useState(false);
   const DynamicLoginPopup = dynamic(() => import('./LoginPopup/LoginPopup.jsx'), { ssr: false });
+
   return (
     <>
     {showLogin?<DynamicLoginPopup setShowLogin={setShowLogin} /> : <> </>}
       <Navbar setShowLogin={setShowLogin}/>
       <Menu category={category} SetCategory={SetCategory} />
       <FoodDisplay category={category} />
-
     </>
   )
 }
