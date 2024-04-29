@@ -6,7 +6,8 @@ import { useContext} from 'react'
 import { FiMinus } from "react-icons/fi";
 import { LiaCartPlusSolid } from "react-icons/lia";
 import { StoreContext } from "@/app/context/StoreContext";
-import { FaHeart } from "react-icons/fa6";
+import { GoHeartFill } from "react-icons/go";
+
 
 const FoodItem = ({ id, name, price, descrption, image }) => {
 
@@ -17,7 +18,7 @@ const FoodItem = ({ id, name, price, descrption, image }) => {
       <div className={styles.food_item_image_container}>
         <Image className={styles.food_item_image} src={image} alt="" />
 
-        <FaHeart
+        <GoHeartFill
           className={`${styles.heart_icon} ${likedItems.includes(id) ? styles.liked : ''}`}
           onClick={() => toggleLike(id)}
         />

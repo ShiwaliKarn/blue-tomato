@@ -4,13 +4,36 @@ import styles from '../Styles/navbar.module.css'
 import Image from 'next/image'
 import { TiShoppingCart } from "react-icons/ti";
 import { CiSearch } from "react-icons/ci";
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
-const Navbar = () => {
-
+const Navbar = ({setShowLogin}) => {
     const[menu, setMenu] = useState("Home");
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const position = window.scrollY;
+            setScrollPosition(position);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
     return (
-        <nav className={styles.navbar}>
+        <nav className={`${styles.navbar}`} style={{
+            boxShadow: scrollPosition > 400? '0px 0px 18px #d1ccccd6' : 'none',
+            backgroundColor: scrollPosition > 400? '#ffffff' : 'transparent',
+            padding: scrollPosition > 400? '13px 30px' : '13px 0px',
+            width: scrollPosition > 400? '100%' : ' ',
+            position: scrollPosition > 400? 'fixed' : ' ',
+            left: scrollPosition > 400? '0' : ' ',
+            top: scrollPosition > 400? '0' : ' ',
+        }}>
             <Image className={styles.logo} src='/favicon.png' width={80} height={100} alt='blue tomato logo' priority></Image>
             <ul className={styles.navbar_menu}>
                 <li onClick={() =>setMenu("Home")} className={menu==="Home"?styles.active:""}>Home</li>
@@ -23,7 +46,7 @@ const Navbar = () => {
                     <TiShoppingCart className={styles.TiShoppingCart}/>
                     <div className={styles.dot}></div>
                 </div>
-                <button>Sign in</button>
+                <button onClick={() =>setShowLogin(true)}>Sign in</button>
             </div>
         </nav>
     )
