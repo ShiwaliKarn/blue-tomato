@@ -42,7 +42,7 @@ const PlaceOrder = () => {
                 </div>
 
                 <div className={styles.place_order_right}>
-                    <div className={` ${styles1.cart_total} ${styles.cart_total_order}`}>
+                    <div className={styles1.cart_total}>
                         <h2>Cart Totals</h2>
 
                         <div className={styles1.cart_total_details}>

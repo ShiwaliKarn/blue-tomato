@@ -104,9 +104,13 @@
     position: absolute;
     right: 15px;
     top: 15px;
-    color: white;
-    font-size: 26px;
+    color: #e6bfbf;
     transition: .3s;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 33px;
+    padding: 6px 2px 3px 2px;
+    box-shadow: 1px 1px 6px #958989;
 }
 
 .liked {

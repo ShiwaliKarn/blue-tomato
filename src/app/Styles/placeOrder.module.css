@@ -4,7 +4,7 @@
     display: flex;
     align-items: start;
     gap: 50px;
-    margin-top: 40px;
+    margin-top: 160px;
     justify-content: space-between;
 }
 
@@ -16,7 +16,7 @@
 .place_order_left .title{
 font-size: 30px;
 font-weight: 600;
-margin-bottom: 50px;
+margin-bottom: 30px;
 }
 
 .place_order_left input{
@@ -41,6 +41,10 @@ margin-bottom: 50px;
 .place_order .cart_total{
     margin-top: 30px;
 }
-.cart_total_order{
- margin-top: 81px;
+
+@media(max-width:530px){
+    .place_order{
+         flex-direction: column;
+    }
+
 }
