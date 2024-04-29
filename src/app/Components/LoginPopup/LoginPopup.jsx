@@ -1,5 +1,5 @@
 'use client';
-
+import 'mutationobserver-shim';
 import styles from '@/app/Styles/loginPopup.module.css'
 import { useState } from 'react'
 import { RxCross2 } from "react-icons/rx";
@@ -8,12 +8,12 @@ import SlInput from '@shoelace-style/shoelace/dist/react/input';
 const LoginPopup = ({ setShowLogin }) => {
   const [currState, setCurrState] = useState("Login");
   const [password, setPassword] = useState("");
-  const [reenteredPassword, setReenteredPassword] = useState("");
+  const [reEnteredPassword, setReEnteredPassword] = useState("");
   const [passwordsMatch, setPasswordsMatch] = useState(true);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (currState === "Sign Up" && password !== reenteredPassword) {
+    if (currState === "Sign Up" && password !== reEnteredPassword) {
       setPasswordsMatch(false);
       return;
     }
@@ -27,8 +27,8 @@ const LoginPopup = ({ setShowLogin }) => {
     }
   };
 
-  const handleReenteredPasswordChange = (event) => {
-    setReenteredPassword(event.target.value);
+  const handleReEnteredPasswordChange = (event) => {
+    setReEnteredPassword(event.target.value);
     if (!passwordsMatch) {
       setPasswordsMatch(true);
     }
@@ -71,8 +71,8 @@ const LoginPopup = ({ setShowLogin }) => {
                 placeholder="Re-enter password"
                 password-toggle
                 className={styles.password}
-                value={reenteredPassword}
-                onInput={handleReenteredPasswordChange}
+                value={reEnteredPassword}
+                onInput={handleReEnteredPasswordChange}
                 required
               />
               {!passwordsMatch && <p>Passwords do not match!</p>}
