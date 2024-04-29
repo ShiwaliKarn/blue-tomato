@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@shoelace-style/shoelace": "^2.15.0",
-    "mutationobserver-shim": "^0.3.7",
     "next": "14.2.2",
     "react": "^18",
     "react-dom": "^18",

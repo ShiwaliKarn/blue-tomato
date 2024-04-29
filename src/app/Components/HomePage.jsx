@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Menu from '../menu/Menu'
 import Navbar from './Navbar'
 import FoodDisplay from './FoodDisplay/FoodDisplay';
-// import LoginPopup from './LoginPopup/LoginPopup';
 import dynamic from 'next/dynamic';
 
 const HomePage = () => {
