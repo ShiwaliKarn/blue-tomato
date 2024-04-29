@@ -1,8 +1,11 @@
 import React from 'react'
+import PlaceOrder from './PlaceOrder'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+<PlaceOrder/>
+    </div>
   )
 }
 

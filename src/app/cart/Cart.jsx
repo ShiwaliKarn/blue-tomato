@@ -7,11 +7,16 @@ import Navbar from '../Components/Navbar';
 import dynamic from 'next/dynamic';
 import Footer from '../Components/Footer';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation'
+
 
 const Cart = () => {
     const { cartItems, food_list, removeFromCart,getTotalCartAmount } = useContext(StoreContext);
     const [showLogin, setShowLogin] = useState(false);
     const DynamicLoginPopup = dynamic(() => import('../Components/LoginPopup/LoginPopup'), { ssr: false });
+    const router = useRouter()
+
+
     return (
         <div>
             {showLogin ? <DynamicLoginPopup setShowLogin={setShowLogin} /> : <> </>}
@@ -57,14 +62,14 @@ const Cart = () => {
                         <hr />
                         <div className={styles.cart_total_details}>
                             <p>Delivery Fee</p>
-                            <p>₹{2}</p>
+                            <p>₹{getTotalCartAmount()===0?0:50}</p>
                         </div>
                         <hr />
                         <div className={styles.cart_total_details}>
                             <b>Total</b>
-                            <b>₹{getTotalCartAmount()+2}</b>
+                            <b>₹{getTotalCartAmount()===0?0:getTotalCartAmount()+50}</b>
                         </div>
-                        <button>PROCEED TO CHECKOUT</button>
+                      <button onClick={()=>router.push('../place-order')}>PROCEED TO CHECKOUT</button>
                     </div>
                     <div className={styles.cart_promocode}>
 

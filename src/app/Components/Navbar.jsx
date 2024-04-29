@@ -32,14 +32,7 @@ const Navbar = ({ setShowLogin }) => {
 
     return (
         <nav className={`${styles.navbar}`} style={{
-            boxShadow: scrollPosition > 400 ? '0px 0px 18px #d1ccccd6' : 'none',
-            backgroundColor: scrollPosition > 400 ? '#ffffff' : 'transparent',
-            padding: scrollPosition > 400 ? '13px 30px' : '13px 0px',
-            width: scrollPosition > 400 ? '100%' : ' ',
-            position: scrollPosition > 400 ? 'fixed' : ' ',
-            left: scrollPosition > 400 ? '0' : ' ',
-            top: scrollPosition > 400 ? '0' : ' ',
-        }}>
+            boxShadow: scrollPosition > 50 ? '0px 0px 18px #d1ccccd6' : 'none'}}>
             <Link href='/'>
             <Image className={styles.logo} src='/favicon.png' width={80} height={100} alt='blue tomato logo' priority />
             </Link>
