@@ -1,5 +1,5 @@
-import connectDB from '../config/db';
-import User from '../models/userModel';
+import connectDB from "@/app/lib/config/db.js";
+import User from "@/app/lib/models/userModel";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import validator from 'validator';

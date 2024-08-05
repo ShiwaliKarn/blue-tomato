@@ -1,7 +1,7 @@
-import connectDB from "../config/db";
+import connectDB from "@/app/lib/config/db.js";
 import { NextResponse } from "next/server";
 import { writeFile } from 'fs/promises';
-import foodModel from "../models/foodModel";
+import foodModel from "@/app/lib/models/foodModel";
 
 
 const LoadDB = async () => {

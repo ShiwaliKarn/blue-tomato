@@ -1,5 +1,5 @@
-import connectDB from "../config/db";
-import foodModel from "../models/foodModel";
+import connectDB from "@/app/lib/config/db.js";
+import foodModel from "@/app/lib/models/foodModel";
 import { NextResponse } from "next/server";
 
 
