@@ -6,22 +6,28 @@ import { useContext} from 'react'
 import { FiMinus } from "react-icons/fi";
 import { LiaCartPlusSolid } from "react-icons/lia";
 import { StoreContext } from "@/app/context/StoreContext";
-import { GoHeartFill } from "react-icons/go";
+import { GoHeart ,GoHeartFill } from "react-icons/go";
 
 
 const FoodItem = ({ id, name, price, descrption, image }) => {
 
   const { cartItems, addToCart, removeFromCart, likedItems, toggleLike } = useContext(StoreContext);
-
+ const isLiked = likedItems.includes(id);
   return (
     <div className={styles.food_item}>
       <div className={styles.food_item_image_container}>
-        <Image className={styles.food_item_image} src={image} alt="" />
-
-        <GoHeartFill
-          className={`${styles.heart_icon} ${likedItems.includes(id) ? styles.liked : ''}`}
-          onClick={() => toggleLike(id)}
-        />
+        <Image className={styles.food_item_image} src={image} alt="food- image" />
+        {isLiked ? (
+          <GoHeartFill
+            className={styles.liked}
+            onClick={() => toggleLike(id)}
+          />
+        ) : (
+          <GoHeart
+            className={styles.heart_icon}
+            onClick={() => toggleLike(id)}
+          />
+        )}
 
         {
           !cartItems[id] ? < LiaCartPlusSolid className={styles.add} onClick={() => addToCart(id)} alt='' />
