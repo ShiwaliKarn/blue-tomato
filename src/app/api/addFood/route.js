@@ -4,10 +4,10 @@ import { writeFile } from 'fs/promises';
 import foodModel from "../models/foodModel";
 
 
-// const LoadDB = async () => {
-//   await connectDB();
-// }
-// LoadDB();
+const LoadDB = async () => {
+  await connectDB();
+}
+LoadDB();
 
 
 
