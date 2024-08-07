@@ -41,3 +41,7 @@ a {
 button{
   cursor: pointer;
 }
+
+.app-content{
+  display: flex;
+}

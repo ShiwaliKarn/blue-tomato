@@ -20,10 +20,10 @@ try{
   const buffer = Buffer.from(imageByteData);
   const path = `./public/uploads/${timestamp}_${image.name}`;
   await writeFile(path, buffer);
-  const imgUrl = `/uploads/${timestamp}_${image.name}`;
+  const imgUrl = `${timestamp}_${image.name}`;
 
   const foodData ={
-    name: `${formData.get('title')}`,
+    name: `${formData.get('name')}`,
     description:`${formData.get('description')}`,
     price:`${formData.get('price')}`,
     category:`${formData.get('category')}`,
