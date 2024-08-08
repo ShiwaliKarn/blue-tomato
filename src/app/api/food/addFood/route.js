@@ -9,35 +9,35 @@ const LoadDB = async () => {
 }
 LoadDB();
 
-
-
 export async function POST(request) {
-try{
-  const formData = await request.formData();
-  const timestamp = Date.now();
-  const image = formData.get('image');
-  const imageByteData = await image.arrayBuffer();
-  const buffer = Buffer.from(imageByteData);
-  const path = `./public/uploads/${timestamp}_${image.name}`;
-  await writeFile(path, buffer);
-  const imgUrl = `${timestamp}_${image.name}`;
+  try {
+    const formData = await request.formData();
+    const timestamp = Date.now();
+    const image = formData.get('image');
+    if (!image) {
+      throw new Error('Image not provided');
+    }
 
-  const foodData ={
-    name: `${formData.get('name')}`,
-    description:`${formData.get('description')}`,
-    price:`${formData.get('price')}`,
-    category:`${formData.get('category')}`,
-    image:`${imgUrl}`,
-  };
+    const imageByteData = await image.arrayBuffer();
+    const buffer = Buffer.from(imageByteData);
+    const path = `./public/uploads/${timestamp}_${image.name}`;
+    await writeFile(path, buffer);
+    const imgUrl = `${timestamp}_${image.name}`;
 
-  await foodModel.create(foodData);
-  console.log("Food Saved");
+    const foodData = {
+      name: formData.get('name'),
+      description: formData.get('description'),
+      price: formData.get('price'),
+      category: formData.get('category'),
+      image: imgUrl,
+    };
 
+    await foodModel.create(foodData);
+    console.log("Food Saved");
 
-  return NextResponse.json({ success: true, message: "Food added", imgUrl });
-} catch (error) {
-  console.error('Error:', error);
-  return NextResponse.json({ success: false, message: 'Error saving food' }, { status: 500 });
+    return NextResponse.json({ success: true, message: "Food added", imgUrl });
+  } catch (error) {
+    console.error('Error:', error);
+    return NextResponse.json({ success: false, message: 'Error saving food' }, { status: 500 });
+  }
 }
-};
-
