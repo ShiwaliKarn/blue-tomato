@@ -7,22 +7,14 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
     const [likedItems, setLikedItems] = useState([]);
     const [cartItems, setCartItems] = useState({});
-    const [token,setToken] = useState("");
-    useEffect(() => {
-        const savedToken = localStorage.getItem("token");
-        if (savedToken) {
-            setToken(savedToken);
-        }
-    }, []);
+    const [token, setToken] = useState("");
 
-    // Save the token to localStorage whenever it changes
     useEffect(() => {
-        if (token) {
-            localStorage.setItem("token", token);
-        } else {
-            localStorage.removeItem("token");
+        if (localStorage.getItem("token")) {
+            setToken(localStorage.getItem("token"));
         }
-    }, [token]);
+    }, [])
+
 
     const addToCart = (itemId) => {
         if (!cartItems[itemId]) {
@@ -60,7 +52,7 @@ const StoreContextProvider = (props) => {
     useEffect(() => {
         console.log("Cart items:", cartItems);
         console.log("Liked items:", likedItems);
-    }, [cartItems,likedItems]);
+    }, [cartItems, likedItems]);
 
     const contextValue = {
         food_list,
