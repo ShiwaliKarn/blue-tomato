@@ -5,7 +5,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import Image from 'next/image';
 
-const page = () => {
+const List = () => {
   const [list, setList] = useState([]);
   const fetchList = async () => {
     const response = await axios.get('/api/food/foodList');
@@ -75,4 +75,4 @@ else {
   )
 }
 
-export default page
+export default List

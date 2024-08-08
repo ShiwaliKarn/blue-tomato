@@ -1,11 +1,12 @@
 'use client';
-import { useState } from 'react';
+
 import './Add.css'
 import Image from 'next/image';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useState } from 'react';
 
-const page = () => {
+const Add = () => {
 
 const[image,setImage] = useState(false);
 const[data,setData] = useState({
@@ -86,4 +87,4 @@ else {
   )
 }
 
-export default page
+export default Add
