@@ -4,6 +4,7 @@ import './List.css'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import Image from 'next/image';
+import { CgRemove } from "react-icons/cg";
 
 const List = () => {
   const [list, setList] = useState([]);
@@ -57,7 +58,7 @@ const removeFood = async (foodId) => {
           <b>Name</b>
           <b>Category</b>
           <b>Price</b>
-          <b>Action</b>
+          <b>Remove</b>
         </div>
         {list.map((item, index) => {
           return (
@@ -66,7 +67,7 @@ const removeFood = async (foodId) => {
               <p>{item.name}</p>
               <p>{item.category}</p>
               <p>₹{item.price}</p>
-              <p style={{cursor:"pointer"}} onClick={()=>removeFood(item._id)}>X</p>
+              <p style={{cursor:"pointer"}} onClick={()=>removeFood(item._id)}><CgRemove  style={{color:"red",fontSize:"15px"}}/></p>
             </div>
           )
         })}
