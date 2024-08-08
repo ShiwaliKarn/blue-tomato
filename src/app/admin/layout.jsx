@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Layout({ children }) {
   return (
     <>
-    <ToastContainer />
+    <ToastContainer  autoClose={1000}/>
       <AdminNavbar />
       <hr />
       <div className="app-content">

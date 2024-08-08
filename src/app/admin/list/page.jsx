@@ -18,30 +18,30 @@ const List = () => {
     }
   }
 
-const removeFood = async(foodId) =>{
-const response = await axios.delete('/api/food/removeFood',{id:foodId})
-await fetchList();
-if(response.data.success){
-  toast.success(response.data.message)
-}
-else {
-  toast.error("Error")
-}
-}
-// const removeFood = async (foodId) => {
-//   try {
-//     const response = await axios.delete(`/api/food/removeFood?id=${foodId}`);
-//     await fetchList();
-//     if (response.data.success) {
-//       toast.success(response.data.message);
-//     } else {
-//       toast.error(response.data.message || "Error");
-//     }
-//   } catch (error) {
-//     toast.error("Failed to remove food");
-//     console.error('Error:', error);
-//   }
-// };
+// const removeFood = async(foodId) =>{
+// const response = await axios.delete('/api/food/removeFood',{id:foodId})
+// await fetchList();
+// if(response.data.success){
+//   toast.success(response.data.message)
+// }
+// else {
+//   toast.error("Error")
+// }
+// }
+const removeFood = async (foodId) => {
+  try {
+    const response = await axios.delete(`/api/food/removeFood?id=${foodId}`);
+    await fetchList();
+    if (response.data.success) {
+      toast.success(response.data.message);
+    } else {
+      toast.error(response.data.message || "Error");
+    }
+  } catch (error) {
+    toast.error("Failed to remove food");
+    console.error('Error:', error);
+  }
+};
 
   useEffect(() => {
     fetchList();
