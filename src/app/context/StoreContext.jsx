@@ -1,6 +1,6 @@
 'use client';
+import axios from "axios";
 import { createContext, useEffect, useState } from "react";
-import { food_list } from "../Components/MenuItems";
 
 export const StoreContext = createContext(null);
 
@@ -8,12 +8,7 @@ const StoreContextProvider = (props) => {
     const [likedItems, setLikedItems] = useState([]);
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState("");
-
-    useEffect(() => {
-        if (localStorage.getItem("token")) {
-            setToken(localStorage.getItem("token"));
-        }
-    }, [])
+    const [food_list,setFoodList] = useState([]);
 
 
     const addToCart = (itemId) => {
@@ -41,6 +36,11 @@ const StoreContextProvider = (props) => {
         return totalAmount;
     }
 
+    const fetchFoodList = async () => {
+        const respone = await axios.get('/api/food/foodList');
+        setFoodList(respone.data.data)
+    }
+
     const toggleLike = (itemId) => {
         if (likedItems.includes(itemId)) {
             setLikedItems((prevLikedItems) => prevLikedItems.filter((item) => item !== itemId));
@@ -53,6 +53,17 @@ const StoreContextProvider = (props) => {
         console.log("Cart items:", cartItems);
         console.log("Liked items:", likedItems);
     }, [cartItems, likedItems]);
+
+    useEffect(() => {
+
+        async function loadData() {
+            await fetchFoodList();
+         if (localStorage.getItem("token")) {
+            setToken(localStorage.getItem("token"));
+         }
+        }
+        loadData();
+    }, [])
 
     const contextValue = {
         food_list,

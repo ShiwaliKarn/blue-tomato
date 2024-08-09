@@ -16,7 +16,7 @@ const FoodItem = ({ id, name, price, descrption, image }) => {
   return (
     <div className={styles.food_item}>
       <div className={styles.food_item_image_container}>
-        <Image className={styles.food_item_image} src={image} alt="food image" />
+        <Image className={styles.food_item_image} src={`/uploads/${image}`} alt="food image" width={100} height={100} />
         {isLiked ? (
           <GoHeartFill
             className={styles.liked}
