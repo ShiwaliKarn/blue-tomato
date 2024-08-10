@@ -9,7 +9,7 @@ import { StoreContext } from "@/app/context/StoreContext";
 import { GoHeart ,GoHeartFill } from "react-icons/go";
 
 
-const FoodItem = ({ id, name, price, descrption, image }) => {
+const FoodItem = ({ id, name, price, description, image }) => {
 
   const { cartItems, addToCart, removeFromCart, likedItems, toggleLike } = useContext(StoreContext);
  const isLiked = likedItems.includes(id);
@@ -43,7 +43,7 @@ const FoodItem = ({ id, name, price, descrption, image }) => {
         <div className={styles.food_item_name}>
           <p>{name}</p>
         </div>
-        <p className={styles.food_item_desc}>{descrption}</p>
+        <p className={styles.food_item_desc}>{description}</p>
         <p className={styles.food_item_price}>₹{price}</p>
       </div>
     </div>

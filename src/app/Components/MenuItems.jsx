@@ -129,7 +129,7 @@ export const food_list = [
         name: "Veg Crunch Burger(Paneer)",
         image: VegCrunchBurgerPaneer,
         price: 99,
-        descrption: "Wheat based crunchy panner patty burger with mayo & cheese",
+        description: "Wheat based crunchy panner patty burger with mayo & cheese",
         category: "Starters",
         subCategory: "Burger"
     },
@@ -138,7 +138,7 @@ export const food_list = [
         name: "Classic Paneer Burger",
         image: classicPaneerBurger,
         price: 129,
-        descrption: "Paneer fritters are usually spiced with chilli, garlic, and ginger, before being pan fried",
+        description: "Paneer fritters are usually spiced with chilli, garlic, and ginger, before being pan fried",
         category: "Starters",
         subCategory: "Burger"
     },
@@ -147,7 +147,7 @@ export const food_list = [
         name: "Classic Chicken Burger",
         image: ClassicChickenBurger,
         price: 129,
-        descrption: "Chicken wheat burger with cheese slice",
+        description: "Chicken wheat burger with cheese slice",
         category: "Starters",
         subCategory: "Burger"
     },
@@ -157,7 +157,7 @@ export const food_list = [
         name: "Kadhai Fusion",
         image: kadhaiFusion,
         price: 179,
-        descrption: "This BBQ panner/ chicken pizza is loaded with diced chicken, spicy barbecue sauce, pepperoncini peppers, onion, and cilantro, cheese",
+        description: "This BBQ panner/ chicken pizza is loaded with diced chicken, spicy barbecue sauce, pepperoncini peppers, onion, and cilantro, cheese",
         category: "Starters",
         subCategory: "Pizza"
     },
@@ -166,7 +166,7 @@ export const food_list = [
         name: "BBQ Pizza",
         image: BBQPizza,
         price: 179,
-        descrption: "This BBQ panner/ chicken pizza is loaded with diced chicken, spicy barbecue sauce, pepperoncini peppers, onion, and cilantro, cheese [thin crust]",
+        description: "This BBQ panner/ chicken pizza is loaded with diced chicken, spicy barbecue sauce, pepperoncini peppers, onion, and cilantro, cheese [thin crust]",
         category: "Starters",
         subCategory: "Pizza"
     },
@@ -175,7 +175,7 @@ export const food_list = [
         name: "Carnival Pizza",
         image: CarnivalPizza,
         price: 229,
-        descrption: "This carnival panner/ chicken pizza is loaded with chicken, peppers, Oregano, onion, and cilantro, cheese. [thin crust]",
+        description: "This carnival panner/ chicken pizza is loaded with chicken, peppers, Oregano, onion, and cilantro, cheese. [thin crust]",
         category: "Starters",
         subCategory: "Pizza"
     },
@@ -184,7 +184,7 @@ export const food_list = [
         name: "Delight Pizza",
         image: DelightPizza,
         price: 229,
-        descrption: "Panner/ Chicken delight pizza with cheese + exotic Vegetable [thin crust]",
+        description: "Panner/ Chicken delight pizza with cheese + exotic Vegetable [thin crust]",
         category: "Starters",
         subCategory: "Pizza"
     },
@@ -193,7 +193,7 @@ export const food_list = [
         name: "Tikka Pizza",
         image: TikkaPizza,
         price: 229,
-        descrption: "Panner/ Chicken delight pizza with cheese + exotic Vegetable [thin crust]",
+        description: "Panner/ Chicken delight pizza with cheese + exotic Vegetable [thin crust]",
         category: "Starters",
         subCategory: "Pizza"
     },
@@ -202,7 +202,7 @@ export const food_list = [
         name: "Chef Special Pizza",
         image: ChefSpecialPizza,
         price: 239,
-        descrption: "Chef special Panner/ Chicken  pizza with cheese + variety of exotic Vegetable + Chef special species & sauces [thin crust]",
+        description: "Chef special Panner/ Chicken  pizza with cheese + variety of exotic Vegetable + Chef special species & sauces [thin crust]",
         category: "Starters",
         subCategory: "Pizza"
     },
@@ -212,7 +212,7 @@ export const food_list = [
         name: "Alfredo",
         image: alfredo,
         price: 249,
-        descrption: "Penne Alfredo",
+        description: "Penne Alfredo",
         category: "Starters",
         subCategory: "Pasta"
     },
@@ -221,7 +221,7 @@ export const food_list = [
         name: "Penne Arabiata",
         image: penneArabita,
         price: 249,
-        descrption: "Penne Arabiata with red sauce",
+        description: "Penne Arabiata with red sauce",
         category: "Starters",
         subCategory: "Pasta"
     },
@@ -231,7 +231,7 @@ export const food_list = [
         name: "Classic Wheat Momos",
         image: ClassicWheatMomo,
         price: 119,
-        descrption: "Classic Steam mono wheat based with no added artificial Ingredients",
+        description: "Classic Steam mono wheat based with no added artificial Ingredients",
         category: "Starters",
         subCategory: "Momos"
     },
@@ -241,7 +241,7 @@ export const food_list = [
         name: "Gobi 65",
         image: gobi65,
         price: 199,
-        descrption: "Spicy and crispy fried cauliflower bites, seasoned with a blend of Indian spices, typically served as a popular appetizer or snack",
+        description: "Spicy and crispy fried cauliflower bites, seasoned with a blend of Indian spices, typically served as a popular appetizer or snack",
         category: "Chinese",
         subCategory: "Starter"
     },
@@ -250,7 +250,7 @@ export const food_list = [
         name: "Crispy Chilli Babycorn",
         image: babycornChilli,
         price: 229,
-        descrption: "Crispy, golden baby corn tossed in a spicy chili sauce for a flavorful, crunchy snack or appetizer",
+        description: "Crispy, golden baby corn tossed in a spicy chili sauce for a flavorful, crunchy snack or appetizer",
         category: "Chinese",
         subCategory: "Starter"
     },
@@ -259,7 +259,7 @@ export const food_list = [
         name: "Chicken Lolipop",
         image: chickenLolipop,
         price: 249,
-        descrption: "Savory, crispy chicken drumettes with a juicy center, served on a stick for easy snacking - 6 Pcs",
+        description: "Savory, crispy chicken drumettes with a juicy center, served on a stick for easy snacking - 6 Pcs",
         category: "Chinese",
         subCategory: "Starter"
     },
@@ -268,7 +268,7 @@ export const food_list = [
         name: "Drums of Heaven",
         image: drumsOfHeaven,
         price: 249,
-        descrption: "Crispy, bite-sized chicken appetizers tossed in a tangy, spicy sauce, offering a burst of flavor with every bite - 6 pcs",
+        description: "Crispy, bite-sized chicken appetizers tossed in a tangy, spicy sauce, offering a burst of flavor with every bite - 6 pcs",
         category: "Chinese",
         subCategory: "Starter"
     },
@@ -277,7 +277,7 @@ export const food_list = [
         name: "Pepper Chicken",
         image: pepperChicken,
         price: 269,
-        descrption: "A savory dish featuring tender chicken marinated in a spicy blend of pepper, herbs, and aromatic spices, offering a bold and flavorful culinary experience. - 8 pcs boneless",
+        description: "A savory dish featuring tender chicken marinated in a spicy blend of pepper, herbs, and aromatic spices, offering a bold and flavorful culinary experience. - 8 pcs boneless",
         category: "Chinese",
         subCategory: "Starter"
     },
@@ -286,7 +286,7 @@ export const food_list = [
         name: "Honey Garlic Chicken",
         image: honeyChicken,
         price: 269,
-        descrption: "Succulent chicken coated in a sweet and savory glaze of honey and garlic, bursting with flavor. - small 8 pcs",
+        description: "Succulent chicken coated in a sweet and savory glaze of honey and garlic, bursting with flavor. - small 8 pcs",
         category: "Chinese",
         subCategory: "Starter"
     },
@@ -295,7 +295,7 @@ export const food_list = [
         name: "Chicken 65",
         image: chicken65,
         price: 279,
-        descrption: "Spicy, crispy South Indian fried chicken bites, bursting with flavor and served as a popular appetizer or snack. - 6 pcs",
+        description: "Spicy, crispy South Indian fried chicken bites, bursting with flavor and served as a popular appetizer or snack. - 6 pcs",
         category: "Chinese",
         subCategory: "Starter"
     },
@@ -304,7 +304,7 @@ export const food_list = [
         name: "Special Chilli Panner Dry/Gravy",
         image: chilliPaneer,
         price: 249,
-        descrption: "Cubes of paneer cooked with bell peppers, onions, and a flavorful chilli sauce, perfect for vegetarians - 8 Pcs",
+        description: "Cubes of paneer cooked with bell peppers, onions, and a flavorful chilli sauce, perfect for vegetarians - 8 Pcs",
         category: "Chinese",
         subCategory: "Starter"
     },
@@ -313,7 +313,7 @@ export const food_list = [
         name: "Special Chilli chicken Dry/Gravy",
         image: chilliSpecial,
         price: 269,
-        descrption: "Tender chicken tossed in a spicy, tangy sauce with peppers and onions. - 8 Pcs boneless",
+        description: "Tender chicken tossed in a spicy, tangy sauce with peppers and onions. - 8 Pcs boneless",
         category: "Chinese",
         subCategory: "Starter"
     },
@@ -322,7 +322,7 @@ export const food_list = [
         name: "Special Chilli Mushroom Dry/Gravy",
         image: chilliMushroom,
         price: 289,
-        descrption: "Juicy mushrooms sautéed in a spicy sauce with onions and capsicum, offering a flavorful vegetarian option",
+        description: "Juicy mushrooms sautéed in a spicy sauce with onions and capsicum, offering a flavorful vegetarian option",
         category: "Chinese",
         subCategory: "Starter"
     },
@@ -331,7 +331,7 @@ export const food_list = [
         name: "Special Chilli Prawn Dry/Gravy",
         image: chilliPrawn,
         price: 319,
-        descrption: "Succulent prawns stir-fried with garlic, peppers, and chilli sauce, delivering a spicy and savory seafood delight. ",
+        description: "Succulent prawns stir-fried with garlic, peppers, and chilli sauce, delivering a spicy and savory seafood delight. ",
         category: "Chinese",
         subCategory: "Starter"
     },
@@ -341,7 +341,7 @@ export const food_list = [
         name: "Manchurian Veg/Non- Veg",
         image: manchurian,
         price: 189,
-        descrption: "Succulent Paneer/ chicken pieces coated in a tangy, flavorful Manchurian sauce - 8 pcs",
+        description: "Succulent Paneer/ chicken pieces coated in a tangy, flavorful Manchurian sauce - 8 pcs",
         category: "Chinese",
         subCategory: "Main Course"
     },
@@ -350,7 +350,7 @@ export const food_list = [
         name: "Chilli Special Veg/Non- Veg",
         image: chilliSpecial,
         price: 249,
-        descrption: "Succulent Paneer/ chicken/mushroom/prawn  pieces coated in a tangy, flavorful Chilli sauce - 8 pcs",
+        description: "Succulent Paneer/ chicken/mushroom/prawn  pieces coated in a tangy, flavorful Chilli sauce - 8 pcs",
         category: "Chinese",
         subCategory: "Main Course"
     },
@@ -359,7 +359,7 @@ export const food_list = [
         name: "Papper Garlic Veg/Non- Veg",
         image: peppergarlic,
         price: 249,
-        descrption: "A tantalizing blend of bold pepper and aromatic garlic, perfectly seasoning tender chicken/paneer/mushroom/prawn for a flavorful culinary experience.",
+        description: "A tantalizing blend of bold pepper and aromatic garlic, perfectly seasoning tender chicken/paneer/mushroom/prawn for a flavorful culinary experience.",
         category: "Chinese",
         subCategory: "Main Course"
     },
@@ -368,7 +368,7 @@ export const food_list = [
         name: "Kung Pao Style Veg/Non- Veg",
         image: kungPao,
         price: 259,
-        descrption: "A spicy and flavorful Chinese dish featuring tender chicken or paneer stir-fried with peanuts, vegetables, and chili peppers, seasoned with soy sauce and spices.",
+        description: "A spicy and flavorful Chinese dish featuring tender chicken or paneer stir-fried with peanuts, vegetables, and chili peppers, seasoned with soy sauce and spices.",
         category: "Chinese",
         subCategory: "Main Course"
     },
@@ -377,7 +377,7 @@ export const food_list = [
         name: "Hunan Style Veg/Non- Veg",
         image: hunan,
         price: 289,
-        descrption: "A spicy and flavorful dish originating from the Hunan province in China, featuring tender pieces of chicken or paneer stir-fried with a medley of vegetables in a rich and aromatic sauce.",
+        description: "A spicy and flavorful dish originating from the Hunan province in China, featuring tender pieces of chicken or paneer stir-fried with a medley of vegetables in a rich and aromatic sauce.",
         category: "Chinese",
         subCategory: "Main Course"
     },
@@ -387,7 +387,7 @@ export const food_list = [
         name: "Choice of Noodles",
         image: noodles,
         price: 169,
-        descrption: "Noodles with all vegetable + choice of toppings",
+        description: "Noodles with all vegetable + choice of toppings",
         category: "Chinese",
         subCategory: "Noodles & Rice"
     },
@@ -396,7 +396,7 @@ export const food_list = [
         name: "Special Noodles",
         image: specialNoodles,
         price: 189,
-        descrption: "Noodles with all vegetable + choice of toppings",
+        description: "Noodles with all vegetable + choice of toppings",
         category: "Chinese",
         subCategory: "Noodles & Rice"
     },
@@ -405,7 +405,7 @@ export const food_list = [
         name: "Choice of Fried Rice",
         image: friedRice,
         price: 169,
-        descrption: "Fried Rice with all vegetable + choice of toppings",
+        description: "Fried Rice with all vegetable + choice of toppings",
         category: "Chinese",
         subCategory: "Noodles & Rice"
     },
@@ -414,7 +414,7 @@ export const food_list = [
         name: "Special Fried Rice",
         image: specialFriedRice,
         price: 189,
-        descrption: "Special Fried Rice with all vegetable + choice of toppings",
+        description: "Special Fried Rice with all vegetable + choice of toppings",
         category: "Chinese",
         subCategory: "Noodles & Rice"
     },
@@ -423,7 +423,7 @@ export const food_list = [
         name: "Teriyaki Chicken Fried Rice",
         image: teriyakiChicken,
         price: 329,
-        descrption: "Chef special teriyaki chicken fried rice ",
+        description: "Chef special teriyaki chicken fried rice ",
         category: "Chinese",
         subCategory: "Noodles & Rice"
     },
@@ -433,7 +433,7 @@ export const food_list = [
         name: "Pahari Paneer Tikka - 6 pcs",
         image: PahariPaneerTikka,
         price: 189,
-        descrption: "Chef special paneer Pahari tikka",
+        description: "Chef special paneer Pahari tikka",
         category: "Tandoor",
         subCategory: "Tandoor Starters"
     },
@@ -442,7 +442,7 @@ export const food_list = [
         name: "Paneer Sholey Tikka",
         image: paneerTikka,
         price: 189,
-        descrption: "Paneer Sholey Tikka",
+        description: "Paneer Sholey Tikka",
         category: "Tandoor",
         subCategory: "Tandoor Starters"
     },
@@ -451,7 +451,7 @@ export const food_list = [
         name: "Chicken Tikka",
         image: chickenTikka,
         price: 189,
-        descrption: "Chicken Tikka - flavour of tandoor",
+        description: "Chicken Tikka - flavour of tandoor",
         category: "Tandoor",
         subCategory: "Tandoor Starters"
     },
@@ -460,7 +460,7 @@ export const food_list = [
         name: "Chicken Hariyali Tikka",
         image: chickenHariyaliTikka,
         price: 189,
-        descrption: "Chicken hariyali tikka with mint & tandoor Flavour",
+        description: "Chicken hariyali tikka with mint & tandoor Flavour",
         category: "Tandoor",
         subCategory: "Tandoor Starters"
     },
@@ -469,7 +469,7 @@ export const food_list = [
         name: "Chicken Malai Tikka",
         image: chickenMalaiTikka,
         price: 189,
-        descrption: "Chicken Malai tikka with Tangy masala & tandoor Flavour",
+        description: "Chicken Malai tikka with Tangy masala & tandoor Flavour",
         category: "Tandoor",
         subCategory: "Tandoor Starters"
     },
@@ -480,7 +480,7 @@ export const food_list = [
         name: "Veg Donne Biriyani",
         image: vegDonneBiryani,
         price: 79,
-        descrption: "Our chef's special signature, cooked with old jeera rice & secret 21 secret served with raita, this is pure nati style.",
+        description: "Our chef's special signature, cooked with old jeera rice & secret 21 secret served with raita, this is pure nati style.",
         category: "Biryani",
         subCategory: "Donne Biryani"
     },
@@ -489,7 +489,7 @@ export const food_list = [
         name: "Egg Donne Biriyani",
         image: eggDonneBiryani,
         price: 179,
-        descrption: "Our chef's special signature, cooked with old jeera rice & secret 21 secret served with raita, this is pure nati style with 100ml Raita + 100 Salon",
+        description: "Our chef's special signature, cooked with old jeera rice & secret 21 secret served with raita, this is pure nati style with 100ml Raita + 100 Salon",
         category: "Biryani",
         subCategory: "Donne Biryani"
     },
@@ -498,7 +498,7 @@ export const food_list = [
         name: "Chicken Donne Biriyani",
         image: chickenDonneBiryani,
         price: 199,
-        descrption: "Our chef's special signature, cooked with old jeera rice & secret 21 secret served with raita, this is pure nati style with 100ml Raita + 100 Salon",
+        description: "Our chef's special signature, cooked with old jeera rice & secret 21 secret served with raita, this is pure nati style with 100ml Raita + 100 Salon",
         category: "Biryani",
         subCategory: "Donne Biryani"
     },
@@ -507,7 +507,7 @@ export const food_list = [
         name: "Chicken Lolipop Donne Biriyani",
         image: lollipopDonneBiryani,
         price: 199,
-        descrption: "Our chef's special signature, cooked with old jeera rice & secret 21 secret served with raita, this is pure nati style with 100ml Raita + 100 Salon",
+        description: "Our chef's special signature, cooked with old jeera rice & secret 21 secret served with raita, this is pure nati style with 100ml Raita + 100 Salon",
         category: "Biryani",
         subCategory: "Donne Biryani"
     },
@@ -516,7 +516,7 @@ export const food_list = [
         name: "Prawn Donne Biriyani",
         image: prawnDonneBiryani,
         price: 229,
-        descrption: "Our chef's special signature, cooked with old jeera rice & secret 21 secret served with raita, this is pure nati style with 100ml Raita + 100 Salon",
+        description: "Our chef's special signature, cooked with old jeera rice & secret 21 secret served with raita, this is pure nati style with 100ml Raita + 100 Salon",
         category: "Biryani",
         subCategory: "Donne Biryani"
     },
@@ -526,7 +526,7 @@ export const food_list = [
         name: "Gulab Jamun",
         image: gulabJamun,
         price: 40,
-        descrption: "2 Pcs Hot Gulab Jamun",
+        description: "2 Pcs Hot Gulab Jamun",
         category: "Dessert",
         subCategory: ""
     },
