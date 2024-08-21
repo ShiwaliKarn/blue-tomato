@@ -1,25 +1,3 @@
-// import connectDB from "@/app/lib/config/db.js";
-// import { NextResponse } from "next/server";
-// import foodModel from "@/app/lib/models/foodModel";
-// const fs = require('fs');
-
-// const LoadDB = async () => {
-//   await connectDB();
-// };
-// LoadDB();
-
-// export async function DELETE(request) {
-
-//     const id  = await request.nextUrl.searchParams.get('id');
-//     const food = await foodModel.findById(id);
-//     fs.unlink(`./public/uploads/${food.image}`,()=>{});
-//     await foodModel.findByIdAndDelete(id);
-//     return NextResponse.json({ success: true, message: "Food removed" });
-
-// }
-
-
-
 import connectDB from "@/app/lib/config/db.js";
 import { NextResponse } from "next/server";
 import foodModel from "@/app/lib/models/foodModel";
