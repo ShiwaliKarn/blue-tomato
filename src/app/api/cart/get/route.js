@@ -3,46 +3,9 @@ import userModel from "@/app/lib/models/userModel.js";
 import jwt from "jsonwebtoken";
 import connectDB from "@/app/lib/config/db.js";
 
-// export async function GET() {
-//   try {
-//     return NextResponse.json({ success: true, message: "API is working" });
-//   } catch (error) {
-//     console.error("Error:", error);
-//     return NextResponse.json(
-//       { success: false, message: "Error" },
-//       { status: 500 }
-//     );
-//   }
-// }
-
-// export async function POST(req) {
-//   try {
-//     let userData = await userModel.findById(req.body.userId);
-//     if (!userData) {
-//       return NextResponse.json(
-//         { success: false, message: "User not found" },
-//         { status: 404 }
-//       );
-//     }
-
-//     const cartData = userData.cartData;
-//     return NextResponse.json({ success: true, cartData });
-//   } catch (error) {
-//     console.error("Error:", error);
-//     return NextResponse.json(
-//       { success: false, message: "Error" },
-//       { status: 500 }
-//     );
-//   }
-// }
-
-const LoadDB = async () => {
-  await connectDB();
-};
-LoadDB();
-
 export async function POST(req) {
   try {
+    await connectDB();
     const token = req.headers.get("token");
 
     if (!token) {
@@ -76,9 +39,12 @@ export async function POST(req) {
       );
     }
 
-    const cartData = userData.cartData || {};
+    const cartData = userData.cartData || new Map();
 
-    return NextResponse.json({ success: true, cartData });
+    return NextResponse.json({
+      success: true,
+      cartData: Object.fromEntries(cartData),
+    });
   } catch (error) {
     console.error("Error:", error);
     return NextResponse.json(

@@ -22,14 +22,27 @@ const StoreContextProvider = (props) => {
   };
 
   const removeFromCart = async (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    // Optimistically update the cart state
+    setCartItems((prev) => {
+      const newCart = { ...prev };
+      if (newCart[itemId] > 1) {
+        newCart[itemId] -= 1;
+      } else {
+        delete newCart[itemId];
+      }
+      return newCart;
+    });
 
     if (token) {
-      await axios.delete(
-        "/api/cart/delete",
-        { itemId },
-        { headers: { token } }
-      );
+      try {
+        await axios.delete("/api/cart/delete", {
+          headers: { token },
+          data: { itemId }, // Pass data in the request body
+        });
+      } catch (error) {
+        console.error("Error removing item from cart:", error);
+        // Optionally, revert the optimistic update if the request fails
+      }
     }
   };
 

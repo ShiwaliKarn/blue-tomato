@@ -3,66 +3,9 @@ import userModel from "@/app/lib/models/userModel.js";
 import jwt from "jsonwebtoken";
 import connectDB from "@/app/lib/config/db.js";
 
-// export async function GET() {
-//   try {
-//     return NextResponse.json({ success: true, message: "API is working" });
-//   } catch (error) {
-//     console.error("Error:", error);
-//     return NextResponse.json(
-//       { success: false, message: "Error" },
-//       { status: 500 }
-//     );
-//   }
-// }
-
-// export async function DELETE(req) {
-//   try {
-//     const body = await req.json();
-//     const userId = body.userId;
-
-//     // Find the user by ID
-//     let userData = await userModel.findById(userId);
-//     if (!userData) {
-//       return NextResponse.json(
-//         { success: false, message: "User not found" },
-//         { status: 404 }
-//       );
-//     }
-
-//     let cartData = userData.cartData;
-
-//     // Ensure the item exists in the cart and has a quantity greater than 0
-//     if (cartData[body.itemId] && cartData[body.itemId] > 0) {
-//       cartData[body.itemId] -= 1;
-
-//       // If the quantity reaches 0, remove the item from the cart
-//       if (cartData[body.itemId] === 0) {
-//         delete cartData[body.itemId];
-//       }
-
-//       await userModel.findByIdAndUpdate(userId, { cartData });
-//       return NextResponse.json({ success: true, message: "Removed from cart" });
-//     } else {
-//       return NextResponse.json(
-//         { success: false, message: "Item not found in cart" },
-//         { status: 404 }
-//       );
-//     }
-//   } catch (error) {
-//     console.error("Error:", error);
-//     return NextResponse.json(
-//       { success: false, message: "Error" },
-//       { status: 500 }
-//     );
-//   }
-// }
-const LoadDB = async () => {
-  await connectDB();
-};
-LoadDB();
-
 export async function DELETE(req) {
   try {
+    await connectDB();
     const token = req.headers.get("token");
 
     if (!token) {
@@ -102,12 +45,12 @@ export async function DELETE(req) {
     let cartData = userData.cartData || {};
 
     // Ensure the item exists in the cart and has a quantity greater than 0
-    if (cartData[itemId] && cartData[itemId] > 0) {
-      cartData[itemId] -= 1;
-
-      // If the quantity reaches 0, remove the item from the cart
-      if (cartData[itemId] === 0) {
-        delete cartData[itemId];
+    if (cartData.has(itemId)) {
+      const currentQuantity = cartData.get(itemId);
+      if (currentQuantity > 1) {
+        cartData.set(itemId, currentQuantity - 1);
+      } else {
+        cartData.delete(itemId);
       }
 
       userData.cartData = cartData;
@@ -116,7 +59,7 @@ export async function DELETE(req) {
       return NextResponse.json({
         success: true,
         message: "Removed from cart",
-        cartData,
+        cartData: Object.fromEntries(cartData),
       });
     } else {
       return NextResponse.json(
@@ -125,10 +68,6 @@ export async function DELETE(req) {
       );
     }
   } catch (error) {
-    console.error("Error:", error);
-    return NextResponse.json(
-      { success: false, message: "Internal Server Error" },
-      { status: 500 }
-    );
+    console.log(error);
   }
 }
