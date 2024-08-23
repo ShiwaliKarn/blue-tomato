@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import userModel from "@/app/lib/models/userModel.js";
 import jwt from "jsonwebtoken";
+import connectDB from "@/app/lib/config/db.js";
 
 // export async function GET() {
 //   try {
@@ -55,6 +56,10 @@ import jwt from "jsonwebtoken";
 //     );
 //   }
 // }
+const LoadDB = async () => {
+  await connectDB();
+};
+LoadDB();
 
 export async function DELETE(req) {
   try {

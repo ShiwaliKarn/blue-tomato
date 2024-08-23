@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import userModel from "@/app/lib/models/userModel.js";
 import jwt from "jsonwebtoken";
+import connectDB from "@/app/lib/config/db.js";
 
 // export async function GET() {
 //   try {
@@ -34,6 +35,11 @@ import jwt from "jsonwebtoken";
 //     );
 //   }
 // }
+
+const LoadDB = async () => {
+  await connectDB();
+};
+LoadDB();
 
 export async function POST(req) {
   try {
@@ -70,7 +76,6 @@ export async function POST(req) {
       );
     }
 
-    // Get cart data from the user document
     const cartData = userData.cartData || {};
 
     return NextResponse.json({ success: true, cartData });
